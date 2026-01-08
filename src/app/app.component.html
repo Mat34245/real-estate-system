@@ -1,1 +1,9 @@
-<button></button>
+<form #form1="ngForm" (ngSubmit)="onSubmit(form1)">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Imie</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" name ="firstname" ngModel>
+    </div>
+    <!-- <input type="text" name="firstname" ngModel>Podaj imię<br> -->
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+</form>
+<p>{{firstname}}    liczba liter w twoim imieniu wynosi:{{liczba_liter}}</p>
