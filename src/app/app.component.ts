@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { NgIf } from "../../node_modules/@angular/common/common_module.d-NEF7UaHr";
+import { DataModel } from './models/data-model';
 
 @Component({
   selector: 'app-root',
@@ -10,17 +12,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent { 
 
-  protected firstname: string = '';
-  protected liczba_liter: number = 0;
- 
-  protected onSubmit(data:any): void {
-    console.log(data.value.firstname);
-    this.firstname = data.value.firstname;
-    ;
-    
-    
-    
-  }
+  tab?:DataModel[] = [] ;
+  
+  
 }
 
 
